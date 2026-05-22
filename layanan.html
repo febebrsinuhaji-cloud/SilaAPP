@@ -38,7 +38,72 @@
             <div class="container">
                 <h1>Ajukan Layanan Akademik</h1>
                 <p class="section-desc">Lengkapi form di bawah untuk mengajukan layanan akademik Anda.</p>
-                <p><em>Form pengajuan akan tersedia pada tahap berikutnya.</em></p>
+                
+            <!-- Form Pengajuan Layanan -->
+             <form action="#" method="post" target="_self" class="form-card">
+                <fieldset>
+                    <legend>Data Pengajuan</legend>
+                    <!-- Nama, NIM, Prodi, Layanan, Tanggal, Keterangan, Button -->
+                    <!-- NAMA -->
+                     <Div>
+                        <Label for="NamaLengkap">Nama Lengkap </Label>
+                        <input type="text" id="namalengkap" name="namalengkap" placeholder="Masukkan Nama Anda" required>
+                    </Div>
+
+                    <!-- NIM DAN PRODI -->
+                     <div>
+                        <!-- NIM -->
+                         <div class="form-group">
+                            <Label for="nim">NIM</Label>
+                            <input type="tex" id="nim" placeholder="Contoh 241121118" required>
+                         </div>
+
+                         <!-- Prodi -->
+                          <div>
+                            <label for="prodi">Program Studi</label>
+                            <select id="prodi" name="prodi" required>
+                                <option value="">- Pilih Program Studi -</option>
+                                <option value="Sistem Informasi">Sistem Informasi</option>
+                                <option value="Teknologi Informasi">Teknologi Informasi</option>
+                                <option value="Teknik Informatika">Teknik Informatika</option>
+                                <option value="Akutansi">Akutansi</option>
+                                <option value="Manajemen">Manajemen</option>
+                            </select>
+                          </div>
+                     </div>
+
+                    <!-- Layanan dan Tanggal -->
+                     <div class="form-row">
+                        <!-- Layanan -->
+                         <div class="form-group">
+                            <label for="layanan">Jenis Layanan</label>
+                            <select id="layanan" name="layanan" required>
+                                <option value="">- Jenis Layanan -</option>
+                                <option value="SKA">SKA - Surat Aktif Kuliah</option>
+                                <option value="CKA">SKA - Cuti Kuliah Akademik</option>
+                                <option value="TNM">SKA - Transkrip Akademik</option>
+                                <option value="PDA">SKA - Perubahan Data</option>
+                            </select>
+                         </div>
+                         <!-- Tanggal -->
+                          <div class="form-group">
+                             <label for="Tanggal">Tanggal Pengajuan</label>
+                             <input type="date" id="tanggal" name="tanggal" required>
+                          </div>
+                          <!-- keterangan -->
+                           <div class="form-group">
+                                <label for="keterangan">Keterangan (Optional)</label>
+                                <textarea id="keterangan" name="keterangan" rows="4" placeholder="Jelaskan Alasan Pengajuan Anda"></textarea>
+                           </div>
+                           <!-- Tombol Kirim dan Reset -->
+                            <div>
+                                <input type="submit" name="submit" value="Ajukan Sekarang" class="btn btn-prymary">
+                               <button type="reset" name="reset" class="btn btn-outline">reset</button>
+                            </div>
+                     </div>
+                </fieldset>
+             </form>
+            <!-- Akhir Form -->
             </div>
         </section>
     </main>
