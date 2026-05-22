@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
+ 
 <body>
-
+ 
     <!-- HEADER & NAVIGASI -->
     <header class="navbar">
         <div class="container navbar-inner">
@@ -32,82 +32,90 @@
             </nav>
         </div>
     </header>
-
+ 
     <main>
         <section class="section">
             <div class="container">
                 <h1>Ajukan Layanan Akademik</h1>
                 <p class="section-desc">Lengkapi form di bawah untuk mengajukan layanan akademik Anda.</p>
-                
-            <!-- Form Pengajuan Layanan -->
-             <form action="#" method="post" target="_self" class="form-card">
-                <fieldset>
-                    <legend>Data Pengajuan</legend>
-                    <!-- Nama, NIM, Prodi, Layanan, Tanggal, Keterangan, Button -->
-                    <!-- NAMA -->
-                     <Div>
-                        <Label for="NamaLengkap">Nama Lengkap </Label>
-                        <input type="text" id="namalengkap" name="namalengkap" placeholder="Masukkan Nama Anda" required>
-                    </Div>
-
-                    <!-- NIM DAN PRODI -->
-                     <div>
-                        <!-- NIM -->
+ 
+                <!-- Form pengajuan layanan (M10) -->
+                 <form action="#" method="post" target="_self" class="form-card">
+                    <fieldset>
+                        <legend>Data Pengajuan</legend>
+                        <!-- Field: Nama, Nim, Prodi, Layanan, Tanggal, Keterangan, Button -->
+ 
+                        <!-- Nama -->
                          <div class="form-group">
-                            <Label for="nim">NIM</Label>
-                            <input type="tex" id="nim" placeholder="Contoh 241121118" required>
+                            <label for="namalengkap">Nama Lengkap</label>
+                            <input type="text" id="namalengkap" name="namalengkap" placeholder="Masukkan Nama Anda.." required>
                          </div>
-
-                         <!-- Prodi -->
-                          <div>
-                            <label for="prodi">Program Studi</label>
-                            <select id="prodi" name="prodi" required>
-                                <option value="">- Pilih Program Studi -</option>
-                                <option value="Sistem Informasi">Sistem Informasi</option>
-                                <option value="Teknologi Informasi">Teknologi Informasi</option>
-                                <option value="Teknik Informatika">Teknik Informatika</option>
-                                <option value="Akutansi">Akutansi</option>
-                                <option value="Manajemen">Manajemen</option>
-                            </select>
-                          </div>
-                     </div>
-
-                    <!-- Layanan dan Tanggal -->
-                     <div class="form-row">
-                        <!-- Layanan -->
-                         <div class="form-group">
-                            <label for="layanan">Jenis Layanan</label>
-                            <select id="layanan" name="layanan" required>
-                                <option value="">- Jenis Layanan -</option>
-                                <option value="SKA">SKA - Surat Aktif Kuliah</option>
-                                <option value="CKA">SKA - Cuti Kuliah Akademik</option>
-                                <option value="TNM">SKA - Transkrip Akademik</option>
-                                <option value="PDA">SKA - Perubahan Data</option>
-                            </select>
+ 
+                        <!-- Nim & Prodi -->
+                         <div class="form-row">
+ 
+                            <!-- NIM -->
+                             <div class="form-group">
+                                <label for="nim">NIM</label>
+                                <input  type="text" id="nim" name="nim" placeholder="contoh: 2121234" required>
+                             </div>
+ 
+                             <!-- Prodi -->
+                              <div class="form-group">
+                                <label for="prodi">Program Studi</label>
+                                <select id="prodi" name="prodi" required>
+                                    <option value="">- Pilih Program Studi -</option>
+                                    <option value="Sistem Informasi">Sistem Informasi</option>
+                                    <option value="Teknik Informatika">Teknik Informatika</option>
+                                    <option value="Manajemen">Manajemen</option>
+                                    <option value="Akuntansi">Akuntansi</option>
+                                </select>
+                              </div>
                          </div>
-                         <!-- Tanggal -->
-                          <div class="form-group">
-                             <label for="Tanggal">Tanggal Pengajuan</label>
-                             <input type="date" id="tanggal" name="tanggal" required>
+ 
+                         <!-- Layanan dan Tanggal -->
+                          <div class="form-row">
+ 
+                            <!-- Layanan -->
+                             <div class="form-group">
+                                <label for="layanan">Jenis Layanan</label>
+                                <select id="layanan" name="layanan" required>
+                                    <option value="" >- Jenis Layanan -</option>
+                                    <option value="SKA">SKA - Surat Aktif Kuliah</option>
+                                    <option value="CAK">CAK - Cuti Akademik</option>
+                                    <option value="TNM">TNM - Transkip Akademik</option>
+                                    <option value="PDA">PDA - Perubahan Data</option>
+                                </select>
+                             </div>
+ 
+                             <!-- Tanggal -->
+                              <div class="form-group">
+                                <label for="tanggal">Tanggal Pengajuan</label>
+                                <input type="date" id="tanggal" name="tanggal" required>
+                              </div>
                           </div>
-                          <!-- keterangan -->
+ 
+                          <!-- Keterangan -->
                            <div class="form-group">
-                                <label for="keterangan">Keterangan (Optional)</label>
-                                <textarea id="keterangan" name="keterangan" rows="4" placeholder="Jelaskan Alasan Pengajuan Anda"></textarea>
+                            <label>Keterangan (opsional)</label>
+                            <textarea id="Keterangan" name="Keterangan" rows="4" placeholder="Jelaskan Alasan Pengajuan Anda.."></textarea>
                            </div>
-                           <!-- Tombol Kirim dan Reset -->
-                            <div>
-                                <input type="submit" name="submit" value="Ajukan Sekarang" class="btn btn-prymary">
-                               <button type="reset" name="reset" class="btn btn-outline">reset</button>
+ 
+                           <!-- Tombol Kirim -->
+                            <div class="form-actions">
+                                <input type="submit" name="submit" value="🚀Ajukan Sekarang" class="btn btn-primary">
+                                <button type="reset" name="reset" class="btn btn-outline">🔁Reset</button>
                             </div>
-                     </div>
-                </fieldset>
-             </form>
-            <!-- Akhir Form -->
+ 
+ 
+ 
+                    </fieldset>
+                 </form>
+                <!-- Akhir form -->
             </div>
         </section>
     </main>
-
+ 
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-inner">
@@ -130,7 +138,7 @@
             </div>
         </div>
     </footer>
-
+ 
 </body>
-
+ 
 </html>
