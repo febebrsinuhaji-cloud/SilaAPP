@@ -608,3 +608,63 @@ input[type="date"]{
     border: 2px solid #334155;
     background: none;
 }
+
+/* M11 - TABLES */
+.data-table{
+    width: 100%;
+    border-collapse: collapse;
+    /* menjadikan batas dempet dengan sekitarnya */
+    margin-top: 16px;
+    min-width: 600px;
+    /* lebar batas mutlak */
+}
+.data-table caption{
+    text-align: left;
+    font-size: 0.85 rem;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+/* TH dan TD */
+.data-table th,
+.data-table td{
+    border-bottom: 1 px solid;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.data-table tr{
+    border-bottom: 1px solid #334155;
+}
+
+/* Highlihgt aja */
+.data-table th{
+    background-color: #295aa8;
+    color: #f1f5f9;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    /* uppercase (huruf besar) lowercase (huruf kecil)*/
+}
+.data-table td{
+    color:#94a3b8;
+    font-size: 0.9rem;
+}
+/* Zebra Stripes (Buat highligt ganjil genap*/
+.data-table tbody tr:nth-child(even){
+    background-color: rgba(30, 41, 59, 0.5);
+}
+.data-table tbody tr:hover{
+    background-color:rgba(64, 149,170, 0.5);
+}
+
+/* responsive */
+@media (max-width: 768px){
+    .data-table{
+        font-size: 0.8rem;
+    }
+    .data-table th,
+    .data-table td{
+        padding: 8px 10px;
+    }
+}
